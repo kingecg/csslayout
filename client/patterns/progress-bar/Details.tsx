@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import useInterval from '../../hooks/useInterval';
 import DetailsLayout from '../../layouts/DetailsLayout';
@@ -12,6 +18,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Progress bar">
+            <Helmet>
+                <meta name="description" content="Create a progress bar with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css progress bar" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

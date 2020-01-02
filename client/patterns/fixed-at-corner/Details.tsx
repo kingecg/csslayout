@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -9,6 +15,10 @@ import Triangle from '../../placeholders/Triangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Fixed at corner">
+            <Helmet>
+                <meta name="description" content="Fix an element at corner with CSS" />
+                <meta name="keywords" content="css fixed" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
@@ -70,7 +80,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.CookieBanner, Pattern.CornerRibbon]} />
+            <RelatedPatterns patterns={[Pattern.CookieBanner, Pattern.CornerRibbon, Pattern.FixedAtSide]} />
         </DetailsLayout>
     );
 };

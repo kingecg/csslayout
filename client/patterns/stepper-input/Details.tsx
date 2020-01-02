@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -9,10 +15,18 @@ const Details: React.FC<{}> = () => {
     const [value, setValue] = useState(0);
     const decrease = () => setValue(value - 1);
     const increase = () => setValue(value + 1);
-    const change = (e: React.ChangeEvent<HTMLInputElement>) => setValue(parseInt(e.target.value, 10));
+    const change = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const v = parseInt(e.target.value, 10);
+        const newValue = isNaN(v) ? 0 : v;
+        setValue(newValue);
+    };
 
     return (
         <DetailsLayout title="Stepper input">
+            <Helmet>
+                <meta name="description" content="Create a stepper input with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css stepper input" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

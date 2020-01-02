@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -67,6 +73,10 @@ const RadialProgress: React.FC<RadialProgressProps> = ({ percentages }) => {
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Radial progress bar">
+            <Helmet>
+                <meta name="description" content="Create a radial progress bar with CSS flexbox" />
+                <meta name="keywords" content="css clip rect, css flexbox, css progress bar" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Heading from '../../components/Heading';
@@ -12,7 +18,7 @@ interface ItemProps {
 
 const Item: React.FC<ItemProps> = ({ action, keys }) => {
     return (
-        <dl
+        <div
             style={{
                 alignItems: 'center',
                 display: 'flex',
@@ -33,13 +39,17 @@ const Item: React.FC<ItemProps> = ({ action, keys }) => {
             >
                 {keys}
             </kbd>
-        </dl>
+        </div>
     );
 };
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Keyboard shortcut">
+            <Helmet>
+                <meta name="description" content="Create a keyboard shortcut with CSS" />
+                <meta name="keywords" content="kbd tag, keyboard shortcut" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     We use the native <code>kbd</code> tag to display the keyboard shortcut.

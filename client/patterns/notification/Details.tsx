@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
@@ -9,6 +15,10 @@ import Circle from '../../placeholders/Circle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Notification">
+            <Helmet>
+                <meta name="description" content="Create a notification with CSS flexbox" />
+                <meta name="keywords" content="css alert, css flexbox, css notification" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     You can use the <Link to='/patterns/close-button'>close button</Link> to

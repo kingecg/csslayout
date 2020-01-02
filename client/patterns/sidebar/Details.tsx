@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -7,6 +13,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Sidebar">
+            <Helmet>
+                <meta name="description" content="Create a sidebar with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css layout, css sidebar" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>Try to scroll the main content!</div>
                 <BrowserFrame

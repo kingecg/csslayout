@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './dropdown.css';
 
@@ -13,6 +19,10 @@ import Triangle from '../../placeholders/Triangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Dropdown">
+            <Helmet>
+                <meta name="description" content="Create a dropdown with CSS" />
+                <meta name="keywords" content="css dropdown, css menu" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px' }}>
                     Move the mouse over the button to see the dropdown.
@@ -83,7 +93,7 @@ const Details: React.FC<{}> = () => {
                                     width: '256px',
                                 }}
                             >
-                            <Block numberOfBlocks={20} justify='center' />
+                                <Block numberOfBlocks={20} justify='center' />
                             </div>
                         </div>
                     )}
@@ -134,7 +144,7 @@ const Details: React.FC<{}> = () => {
 `}
                 />
             </div>
-            <RelatedPatterns patterns={[Pattern.Menu]} />
+            <RelatedPatterns patterns={[Pattern.MegaMenu, Pattern.Menu]} />
         </DetailsLayout>
     );
 };

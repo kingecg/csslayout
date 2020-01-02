@@ -1,3 +1,8 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -20,7 +25,7 @@ const CoverCard: React.FC<CoverCardProps> = ({ pattern }) => {
                 justifyContent: 'flex-start',
                 padding: '16px',
                 textDecoration: 'none',
-                width: '150px',
+                width: '16.666666666666668%',
             }}
         >
             <CoverLoader pattern={pattern} />

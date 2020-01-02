@@ -1,3 +1,8 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
 
 import SubscribeForm from './SubscribeForm';
@@ -147,6 +152,17 @@ const Footer: React.FC<{}> = () => {
                                     target="_blank"
                                 >
                                     @nghuuphuoc
+                                </a>
+                                <div>;</div>
+                            </li>
+                            <li style={{ alignItems: 'center', display: 'flex' }}>
+                                <div>dev.to:</div>
+                                <a
+                                    href="https://dev.to/phuocng"
+                                    style={{ marginLeft: 'auto', textDecoration: 'none' }}
+                                    target="_blank"
+                                >
+                                    @phuocng
                                 </a>
                                 <div>;</div>
                             </li>

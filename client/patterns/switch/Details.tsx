@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -11,6 +17,10 @@ const Details: React.FC<{}> = () => {
 
     return (
         <DetailsLayout title="Switch">
+            <Helmet>
+                <meta name="description" content="Create a switch with CSS flexbox" />
+                <meta name="keywords" content="css custom checkbox, css flexbox, css switch, css switcher" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <div style={{ lineHeight: 1.5, marginBottom: '16px'}}>
                     The checkbox is placed inside a label. So when clicking on the label,

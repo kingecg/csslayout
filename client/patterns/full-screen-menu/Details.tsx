@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import BrowserFrame from '../../placeholders/BrowserFrame';
@@ -7,6 +13,10 @@ import Rectangle from '../../placeholders/Rectangle';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Full screen menu">
+            <Helmet>
+                <meta name="description" content="Create a full screen menu with CSS flexbox" />
+                <meta name="keywords" content="css fixed, css flexbox, css menu" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
 import Block from '../../placeholders/Block';
@@ -9,6 +15,10 @@ import Square from '../../placeholders/Square';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Media object">
+            <Helmet>
+                <meta name="description" content="Create a media object with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, media object" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

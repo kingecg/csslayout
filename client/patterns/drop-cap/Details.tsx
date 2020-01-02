@@ -1,16 +1,23 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import './dropcap.css';
 
 import DetailsLayout from '../../layouts/DetailsLayout';
-import Block from '../../placeholders/Block';
 import BrowserFrame from '../../placeholders/BrowserFrame';
-import Rectangle from '../../placeholders/Rectangle';
-import Square from '../../placeholders/Square';
 
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Drop cap">
+            <Helmet>
+                <meta name="description" content="Create a drop cap with CSS" />
+                <meta name="keywords" content="css drop cap" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

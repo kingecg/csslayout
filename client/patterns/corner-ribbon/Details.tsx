@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Heading from '../../components/Heading';
@@ -10,6 +16,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Corner ribbon">
+            <Helmet>
+                <meta name="description" content="Create a corner ribbon with CSS flexbox" />
+                <meta name="keywords" content="css flexbox, css ribbon" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(

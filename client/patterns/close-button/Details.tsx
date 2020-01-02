@@ -1,4 +1,10 @@
+/**
+ * A collection of popular layouts and patterns made with CSS (https://csslayout.io)
+ * (c) 2019 - 2020 Nguyen Huu Phuoc <https://twitter.com/nghuuphuoc>
+ */
+
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import RelatedPatterns from '../../components/RelatedPatterns';
 import Pattern from '../../constants/Pattern';
@@ -8,6 +14,10 @@ import BrowserFrame from '../../placeholders/BrowserFrame';
 const Details: React.FC<{}> = () => {
     return (
         <DetailsLayout title="Close button">
+            <Helmet>
+                <meta name="description" content="Create a close button with CSS flexbox" />
+                <meta name="keywords" content="css close button, css flexbox" />
+            </Helmet>
             <div style={{ padding: '64px 32px' }}>
                 <BrowserFrame
                     content={(
@@ -106,7 +116,7 @@ const Details: React.FC<{}> = () => {
                 />
             </div>
 
-            <RelatedPatterns patterns={[Pattern.Modal, Pattern.Notification]} />
+            <RelatedPatterns patterns={[Pattern.Chip, Pattern.Modal, Pattern.Notification]} />
         </DetailsLayout>
     );
 };
